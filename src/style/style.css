@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .border-color {
+    @apply border-gray-400;
+  }
+  :is(.dark .border-color) {
+    @apply border-gray-700;
+  }
+}
+
+@layer components {
+  .container-box {
+    @apply rounded-md p-2 border border-color bg-white;
+  }
+  :is(.dark .container-box) {
+    @apply bg-gray-800;
+  }
+}
