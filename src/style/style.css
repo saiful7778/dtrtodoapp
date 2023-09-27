@@ -19,3 +19,27 @@
     @apply bg-gray-800;
   }
 }
+
+@layer components {
+  .todo-item {
+    @apply flex items-center justify-between gap-2 p-2 rounded-md bg-gray-200 border border-gray-400 cursor-pointer;
+  }
+  .todo-item:hover {
+    @apply bg-gray-300;
+  }
+  :is(.dark .todo-item) {
+    @apply bg-gray-700 border-gray-600;
+  }
+  :is(.dark .todo-item:hover) {
+    @apply bg-slate-600;
+  }
+  .input-check {
+    @apply hidden;
+  }
+  .todo-item:hover .input-check {
+    @apply block;
+  }
+  .input-check:checked + p {
+    @apply line-through opacity-40;
+  }
+}
