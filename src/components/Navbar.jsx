@@ -8,7 +8,7 @@ const Navbar = ({ handleThemeState, themeState }) => {
   return (
     <nav className="flex items-center gap-4 justify-between container-box">
       <div className="flex gap-1 md:gap-4">
-        <button className="flex flex-col justify-center items-center gap-1 w-8 h-8 rounded-md p-2 bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 border border-color" type="button">
+        <button className="icon-btn icon-btn-pri gap-1 rounded-md" type="button">
           <span className="w-4 h-0.5 rounded-sm bg-gray-700 dark:bg-gray-300"></span>
           <span className="w-4 h-0.5 rounded-sm bg-gray-700 dark:bg-gray-300"></span>
           <span className="w-4 h-0.5 rounded-sm bg-gray-700 dark:bg-gray-300"></span>
@@ -19,7 +19,7 @@ const Navbar = ({ handleThemeState, themeState }) => {
         </div>
       </div>
       <div className="flex items-center gap-1 md:gap-4">
-        <button onClick={handleThemeState} className='w-8 h-8 inline-flex justify-center items-center rounded-full bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 border border-color' type="button">
+        <button onClick={handleThemeState} className='icon-btn icon-btn-pri rounded-full' type="button">
           {themeState ?
             <LuSunDim /> :
             <PiMoonStarsBold />

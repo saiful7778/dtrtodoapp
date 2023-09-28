@@ -49,3 +49,33 @@
     @apply visible opacity-100;
   }
 }
+
+@layer components {
+  .icon-btn {
+    @apply inline-flex flex-col justify-center items-center w-8 h-8;
+  }
+  .icon-btn-pri {
+    @apply bg-gray-200 border border-color;
+  }
+  :is(.dark .icon-btn-pri) {
+    @apply bg-gray-800;
+  }
+  :is(.dark .icon-btn-pri:hover) {
+    @apply bg-gray-700;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-1 px-3 inline-flex justify-center items-center rounded-md font-medium text-sm;
+  }
+  .btn-pri {
+    @apply bg-gray-200 uppercase border border-color;
+  }
+  :is(.dark .btn-pri) {
+    @apply bg-gray-700 text-gray-50;
+  }
+  .btn-accent {
+    @apply bg-green-600 text-white border border-gray-500;
+  }
+}

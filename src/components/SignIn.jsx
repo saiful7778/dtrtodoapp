@@ -31,7 +31,7 @@ const SignIn = () => {
     <>
       {
         userDetails == null ? (
-          <button onClick={handleGoogleSignIn} className="py-1 px-3 rounded-md bg-green-600 text-white border border-gray-500" type="button">Sign in</button>
+          <button onClick={handleGoogleSignIn} className="btn btn-accent" type="button">Sign in</button>
         ) : (
           <div className="hover-item relative">
             <div className="w-8 h-8 border border-color rounded-full object-cover overflow-hidden">

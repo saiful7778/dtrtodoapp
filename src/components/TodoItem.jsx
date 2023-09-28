@@ -12,10 +12,10 @@ const TodoItem = ({ todoData }) => {
         <p>{todoName}</p>
       </div>
       <div className="flex items-center gap-2">
-        <button className='w-7 h-7 inline-flex justify-center items-center border border-gray-500 rounded-md' type="button">
+        <button className='icon-btn rounded-md border border-gray-500' type="button">
           <BiEdit size={15} />
         </button>
-        <button className='w-7 h-7 inline-flex justify-center items-center bg-red-800 text-white rounded-md' type="button">
+        <button className='icon-btn bg-red-800 text-white rounded-md' type="button">
           <FaTrashAlt size={15} />
         </button>
       </div>
