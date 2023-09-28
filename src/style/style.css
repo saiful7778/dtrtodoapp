@@ -37,9 +37,18 @@
     @apply hidden;
   }
   .todo-item:hover .input-check {
-    @apply block;
+    /* display: none; */
+    animation: inputShowAnimation 0.3s ease;
   }
   .input-check:checked + p {
     @apply line-through opacity-40;
+  }
+  @keyframes inputShowAnimation {
+    0% {
+      display: none;
+    }
+    100% {
+      display: block;
+    }
   }
 }
