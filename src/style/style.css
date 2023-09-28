@@ -52,3 +52,9 @@
     }
   }
 }
+
+@layer components {
+  .hover-item:hover .hover-box {
+    @apply visible opacity-100;
+  }
+}

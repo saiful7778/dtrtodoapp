@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { PiMoonStarsBold } from 'react-icons/pi';
 import { LuSunDim } from 'react-icons/lu';
+import SignIn from './SignIn';
 
 const Navbar = ({ handleThemeState, themeState }) => {
   return (
@@ -24,9 +25,8 @@ const Navbar = ({ handleThemeState, themeState }) => {
             <PiMoonStarsBold />
           }
         </button>
-        <div className="w-8 h-8 border border-color rounded-full object-cover overflow-hidden">
-          <img src="/user.jpeg" alt="" />
-        </div>
+
+        <SignIn />
       </div>
     </nav>
   )
