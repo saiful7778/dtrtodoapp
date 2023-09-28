@@ -35,7 +35,7 @@ const SignIn = () => {
         ) : (
           <div className="hover-item relative">
             <div className="w-8 h-8 border border-color rounded-full object-cover overflow-hidden">
-              <img src={userDetails.photoURL} alt="" />
+              <img src={userDetails.photoURL} alt="user image" />
             </div>
             <div className="hover-box invisible opacity-0 transition-all duration-300 absolute top-11 right-0 z-10 whitespace-nowrap">
               <div className="container-box">
