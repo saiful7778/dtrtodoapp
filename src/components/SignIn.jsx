@@ -2,7 +2,7 @@ import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth"
 import { auth } from "../utility/firebaseConfig"
 import { useState } from "react";
 
-const SignIn = () => {
+const SignInNav = () => {
   const [userDetails, setUserDetails] = useState(null);
   const provider = new GoogleAuthProvider();
 
@@ -57,4 +57,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignInNav

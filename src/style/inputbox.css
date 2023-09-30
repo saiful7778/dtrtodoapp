@@ -1,0 +1,91 @@
+@layer components {
+  /* ==============================
+    =========   Input box   =========
+    ================================= */
+  .input-box {
+    @apply h-full w-full rounded-md border border-gray-200 bg-transparent p-3 text-sm font-normal outline outline-0 transition-all;
+  }
+  /*
+    *  Placeholder styles
+    */
+  .input-box:placeholder-shown {
+    @apply border border-gray-200 border-t-gray-200;
+  }
+  /*
+    *  State styles
+    */
+  .input-box:focus {
+    @apply border-2 border-gray-200 border-t-transparent outline-0;
+  }
+  .input-box:disabled {
+    @apply border-0 bg-gray-900;
+  }
+
+  /* ==============================
+    =========   Label box   =========
+    ================================= */
+  .input-box-label {
+    @apply pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none font-normal leading-tight text-gray-200 transition-all;
+    font-size: 11px;
+  }
+  /*
+    *  before and after styles
+    */
+  .input-box-label::before,
+  .input-box-label::after {
+    @apply pointer-events-none box-border block h-1.5 w-2.5  border-t border-gray-200 transition-all;
+    margin-top: 6.5px;
+    content: "";
+  }
+  .input-box-label::before {
+    @apply rounded-tl-md border-l mr-1;
+  }
+  .input-box-label::after {
+    @apply ml-1 flex-grow rounded-tr-md border-r;
+  }
+  /*
+    *  peer placeholder shown styles
+    */
+  .peer:placeholder-shown ~ .input-box-label {
+    @apply text-sm text-gray-200;
+    line-height: 4.1;
+  }
+  /*
+    *  peer placeholder shown before and after styles
+    */
+  .peer:placeholder-shown ~ .input-box-label::before,
+  .peer:placeholder-shown ~ .input-box-label::after {
+    @apply border-transparent;
+  }
+  /*
+    *  peer state styles
+    */
+  .peer:focus ~ .input-box-label {
+    @apply leading-tight;
+    font-size: 11px;
+  }
+  .peer:disabled {
+    @apply text-transparent;
+  }
+  /*
+    *  peer state before and after styles
+    */
+  .peer:focus ~ .input-box-label::before,
+  .peer:focus ~ .input-box-label::after {
+    @apply border-t-2 border-gray-200;
+  }
+  .peer:focus ~ .input-box-label::before {
+    @apply border-l-2;
+  }
+  .peer:focus ~ .input-box-label::after {
+    @apply border-r-2;
+  }
+  .peer:disabled::before,
+  .peer:disabled::after {
+    @apply border-transparent;
+  }
+
+  .peer:disabled:placeholder-shown ~ .input-box-label {
+    @apply text-gray-700;
+  }
+}
