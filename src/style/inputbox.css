@@ -3,7 +3,7 @@
     =========   Input box   =========
     ================================= */
   .input-box {
-    @apply h-full w-full rounded-md border border-gray-200 bg-transparent p-3 text-sm font-normal outline outline-0 transition-all;
+    @apply h-full w-full rounded-md border border-gray-200 border-t-transparent bg-transparent p-3 text-sm font-normal outline outline-0 transition-all;
   }
   /*
     *  Placeholder styles
