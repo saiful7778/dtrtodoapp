@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import { FcGoogle } from "react-icons/fc";
 
-const NavigateButton = () => {
+const ByGoogleButton = ({onClick}) => {
   return (
     <button
+    onClick={onClick}
       type="button"
       className="flex items-center border border-gray-500 w-fit"
     >
@@ -14,4 +16,8 @@ const NavigateButton = () => {
   );
 };
 
-export default NavigateButton;
+ByGoogleButton.propTypes = {
+  onClick: PropTypes.func
+}
+
+export default ByGoogleButton;

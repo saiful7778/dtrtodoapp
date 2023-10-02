@@ -89,3 +89,12 @@
     @apply text-gray-700;
   }
 }
+
+@layer components {
+  .input {
+    @apply w-full outline-none bg-transparent rounded-md p-2 border border-gray-500;
+  }
+  .label {
+    @apply text-sm;
+  }
+}
